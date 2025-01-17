@@ -4,24 +4,34 @@
     {
         static void Main(string[] args)
         {
-            double nota_final = 60;
+            double nota_final = 95;
             string resultado;
 
             if (nota_final >= 60)
-            {
-                resultado = "Aprovado";
-            }
-            else if (nota_final >= 40 & nota_final < 60)
-            {
-                resultado = "Recuperação";
+            { 
+                if (nota_final > 90) 
+                {
+                    resultado = "Aprovado com louvor";
+                }
+                else
+                {
+                    resultado = "Aprovado";
+                }
             }
             else
             {
-                resultado = "Reprovado";
+                if (nota_final >= 40)
+                {
+                    resultado = "Recuperação";
+                }
+                else
+                {
+                    resultado = "Reprovado";
+                }
             }
 
 
-            Console.WriteLine("O aluno está {0}.", resultado);
+            Console.WriteLine(" Nota do aluno: {0} - Situação: {1}.", nota_final, resultado);
 
         }
     }
