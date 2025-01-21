@@ -16,7 +16,7 @@
                 Console.Write("Digite o valor do lado C: ");
                 ladoC = Convert.ToInt32(Console.ReadLine());
 
-                if ((ladoA < ladoB + ladoC) && (ladoB < ladoA + ladoC) && (ladoC < ladoA + ladoB))
+                if (ladoA < ladoB + ladoC && ladoB < ladoA + ladoC && ladoC < ladoA + ladoB)
                 {
                     Console.Write("O valores informados formam um triângulo: ");
 
