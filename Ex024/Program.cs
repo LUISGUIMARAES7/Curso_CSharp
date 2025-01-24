@@ -4,20 +4,21 @@
     {
         static void Main(string[] args)
         {
+            string genero;
+
+            Console.Write("Digite o seu gênero: ");
+            genero = Console.ReadLine().ToUpper();
+
             int n, soma, qtd;
             soma = qtd = 0;
 
-            for (int i = 0; i < 6; i++)
+            while (genero != "F" && genero != "M")
             {
-                Console.WriteLine("Digite um valor");
-                n = Convert.ToInt32(Console.ReadLine());
-                if (n % 2 == 0)
-                {
-                    soma += n;
-                    qtd++;
-                }
+                Console.Write("Digite o seu gênero: ");
+                genero = Console.ReadLine();
             }
-            Console.WriteLine("A soma dos {0} valores pares é {1}",qtd, soma);
+
+            Console.WriteLine("Ok");
         }
     }
 }
