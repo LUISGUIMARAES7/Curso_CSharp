@@ -1,4 +1,6 @@
-﻿namespace Contador
+﻿using static System.Runtime.InteropServices.JavaScript.JSType;
+
+namespace Contador
 {
     internal class Program
     {
@@ -12,12 +14,18 @@
             int fim = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine("Digite o passo: ");
             int passo = Convert.ToInt32(Console.ReadLine());
+            //passo = Math.Abs(passo);
 
             Contador(ini, fim, passo);
         }
 
         static void Contador(int i, int f, int p)
         {
+            if (p < 0)
+            {
+                p = -p;
+            }
+
             Escrever($"Contagem de {i} até {f} de {p} em {p}");
             Thread.Sleep(1000);
 
@@ -41,6 +49,7 @@
                     cont -= p;
                     Thread.Sleep(500);
                 }
+                Console.WriteLine("FIM!");
             }
             
         }
